@@ -1,7 +1,6 @@
-import Card from "../Components/Ui/Cards";
 import NewMeetupsForm from "../Components/Meetups/NewMeetupsForm";
 import { useNavigate } from "react-router-dom";
-import React from 'react';
+import React from "react";
 
 function NewMeetupsPage() {
   const nav = useNavigate();
@@ -16,7 +15,7 @@ function NewMeetupsPage() {
         body: JSON.stringify(meetupData),
         headers: {
           "Content-Type": "application/json",
-        }
+        },
       }
     ).then(() => {
       nav("/", { replace: true });
