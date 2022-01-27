@@ -1,19 +1,22 @@
-import css from "./Meetupitem.module.css";
+import Card from "../Ui/Cards";
+import classes from "./Meetupitem.module.css";
 
 function Meetupitem(props) {
   return (
-    <li className={css.item}>
-      <div className={css.image}>
-        <img src={props.image} alt={props.title} />
-      </div>
-      <div className={css.content}>
-        <h3>{props.title}</h3>
-        <address>{props.address}</address>
-        <p>{props.description}</p>
-      </div>
-      <div className={css.actions}>
-        <button>Add to favorites</button>
-      </div>
+    <li className={classes.item}>
+      <Card>
+        <div className={classes.image}>
+          <img src={props.image} alt={props.title} />
+        </div>
+        <div className={classes.content}>
+          <h3>{props.title}</h3>
+          <address>{props.address}</address>
+          <p>{props.description}</p>
+        </div>
+        <div className={classes.actions}>
+          <button>To Favorites</button>
+        </div>
+      </Card>
     </li>
   );
 }
